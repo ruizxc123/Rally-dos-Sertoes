@@ -3,6 +3,7 @@
     padding: 0 !important;
 }
 
+
 /* Cores */
 :root {
     --cor1: #D95F02;
@@ -11,19 +12,53 @@
     --cor4: #1C1C1C;
     --cor5: #F5F5F5;
     --cor6: #ffffff;
-    --cor7: #e69500;    
+    --cor7: #e69500;
 }
 
 
 /* NAV */
 .nav-top {
-    background: var(--cor1)!important;
+    background: var(--cor1) !important;
+}
+
+.container {
+    margin-bottom: 1em !important;
+}
+
+.nav-item {
+    background-color: var(--cor3) !important;
+    margin: 0.5em !important;
+    text-align: center !important;
+    border-radius: 3em !important;
+    width: auto !important;
 }
 
 .nav-link {
     color: var(--cor6) !important;
-    font-weight: 500!important;
-    font-size: 1.1rem !important;
+    padding: 0.5em 1em !important;
+}
+
+/* Media Query: Aplicar estes estilos SOMENTE em telas grandes (computador) */
+@media (min-width: 992px) {
+
+    /* Torna os botões redondos e grandes */
+    .nav-item {
+        /* Remove a margem vertical entre eles, se houver */
+        margin: 0 0.5em !important;
+        /* Define um tamanho fixo grande (ajuste este valor para o que você precisa) */
+        width: 10em !important;
+        height: 2em !important;
+        /* Alinha o texto no meio do botão */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Ajusta o link dentro do botão para preencher e manter o texto visível */
+    .nav-link {
+        padding: 0 !important;
+        /* Remove o padding, pois o .nav-item já define o tamanho */
+    }
 }
 
 .nav-link:hover {
@@ -31,80 +66,80 @@
 }
 
 .btn-buscar {
-    background: var(--cor2)!important;
-    color: var(--cor4)!important;
-    border: none!important;
-    font-weight: 500!important;
-    padding: 0.5em 1em !important;
+    background: var(--cor2) !important;
+    color: var(--cor4) !important;
 }
 
 .btn-buscar:hover {
-    background: var(--cor7)!important;
+    background: var(--cor7) !important;
 }
 
 /* CAROUSEL */
+
 .carousel .car-img {
-    height: 40em!important;
-    width: 100% !important; 
-    object-fit: cover!important;
-    object-position: center!important;
+    height: 50em !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
 }
 
 /* Legenda  */
 .carousel-caption {
-    background: rgba(28, 28, 28, 0.75)!important;
-    border-radius: 0.5em!important;
-    padding: 0.6rem 1rem!important;
-    bottom: 2%!important; 
+    background: rgba(28, 28, 28, 0.75) !important;
+    border-radius: 0.5em !important;
+    padding: 0.6rem 1rem !important;
+    bottom: 2% !important;
     left: 10% !important;
     right: 10% !important;
     width: 80% !important;
     max-width: 90% !important;
-    margin: auto !important;
 }
 
 .carousel-caption h3 {
-    color: var(--cor2)!important;
-    font-weight: bold!important;
- 
-    font-size: 1.5rem !important;
+    color: var(--cor2) !important;
+    font-weight: bold !important;
 }
 
 /* Cards */
 .card {
     border: none !important;
-    margin: 1em !important; 
-    padding: 2em !important; 
-    box-shadow: 0 0.25rem 0.875rem rgba(0, 0, 0, 0.08)!important;
+    margin: 1em !important;
+    padding: 2em !important;
+    box-shadow: 0 0.25rem 0.875rem rgba(0, 0, 0, 0.08) !important;
     transition: transform 0.3s ease !important;
 }
 
 .card:hover {
-    transform: translateY(-0.3em)!important;
+    transform: translateY(-0.3em) !important;
 }
 
 .card-title {
-    color: var(--cor1)!important;
-    font-weight: bold!important;
+    color: var(--cor1) !important;
+    font-weight: bold !important;
     font-size: 1.25rem !important;
 }
 
 .card-thumb {
-    height: 25vh!important;
+    height: 25vh !important;
     width: 100% !important;
-    object-fit: cover!important;
-    object-position: center!important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.section-title::after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 5rem !important;
+    height: 0.2rem !important;
+    background: var(--cor1) !important;
 }
 
 /* Secoes */
-body {
-    background: var(--cor5)!important;
-    color: var(--cor4)!important;
-    font-family: Arial, sans-serif!important;
-}
 
 .texto {
-    color: var(--cor4)!important;
+    color: var(--cor4) !important;
 }
 
 section {
@@ -120,7 +155,7 @@ section {
 }
 
 .section-title::after {
-    content: "" !important; 
+    content: "" !important;
     position: absolute !important;
     bottom: 0 !important;
     left: 0 !important;
@@ -129,50 +164,13 @@ section {
     background: var(--cor1) !important;
 }
 
-/* Contato e mapa */
-.mapa iframe {
-    border-radius: 0.5em;
-    width: 100%; 
-}
-
-.contact-form .btn-primary {
-    background: var(--cor1) !important;
-    border: none !important;
-    padding: 0.8em 2em !important;
-    font-weight: 500 !important;
-    font-size: 1rem !important;
-}
-
-.contact-form .btn-primary:hover {
-    background: var(--cor3) !important;
-}
-
-.social-icons a {
-    display: inline-block !important;
-    transition: transform 0.3s ease !important;
-}
-
-
-
-.social-icons a:hover {
-    transform: scale(1.1) !important;
-}
-
-/* Footer */
-footer {
-    background: var(--cor4);
-    color: #fff !important;
-    padding: 2% 0 !important;
-}
-
-
 /* Galeria */
 .gallery-item {
     position: relative !important;
     overflow: hidden !important;
     border-radius: 0.5em !important;
     margin-bottom: 1.5rem !important;
-    margin: 1em !important; 
+    margin: 1em !important;
 }
 
 .gallery-item img {
@@ -201,4 +199,54 @@ footer {
 
 .gallery-item:hover .gallery-caption {
     transform: translateY(0) !important;
+}
+
+/* Contato e mapa */
+.mapa iframe {
+    border-radius: 0.5em !important;
+    width: 100% !important;
+}
+
+.div-mapa {
+    text-align: center !important;
+    align-items: center !important;
+    border-radius: 1em !important;
+}
+
+.iconredes {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 3em !important;
+    margin-bottom: 1em !important;
+}
+
+.icons a:hover {
+    transform: scale(1.1) !important;
+}
+
+.icons a {
+    display: inline-block !important;
+    transition: transform 0.3s ease !important;
+}
+
+.formulario {
+    margin-right: 10% !important;
+    width: 40% !important;
+    border-radius: 1em !important;
+}
+
+.contact-form .btn-primary {
+    background: var(--cor1) !important;
+    border: none !important;
+    padding: 0.8em 2em !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+}
+
+
+/* Footer */
+footer {
+    background: var(--cor4);
+    color: #fff !important;
+    padding: 2% 0 !important;
 }
