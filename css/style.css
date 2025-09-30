@@ -166,8 +166,10 @@ section {
     overflow: hidden !important;
     border-radius: 0.5em !important;
     margin-bottom: 1.5rem !important;
+    box-shadow: 0 1em 1em rgba(0, 0, 0, 0.08) !important;
     margin: 1em !important;
 }
+
 
 .gallery-item img {
     width: 100% !important;
